@@ -153,7 +153,6 @@ function onDeviceMotion(e) {
   setNumber(accigNumbers[0], accig.x);
   setNumber(accigNumbers[1], accig.y);
   setNumber(accigNumbers[2], accig.z);
-  setNumber(intervalNumber, accig.interval, 6);
 
   const acc = e.acceleration;
   setBiBar(accBars[0], acc.x / 20);
@@ -170,6 +169,8 @@ function onDeviceMotion(e) {
   setNumber(rotNumbers[0], rot.alpha);
   setNumber(rotNumbers[1], rot.beta);
   setNumber(rotNumbers[2], rot.gamma);
+
+  setNumber(intervalNumber, e.interval, 6);
 }
 
 function onDeviceOrientation(e) {
