@@ -108,6 +108,7 @@ function requestDeviceMotion() {
           .then((response) => {
             if (response == "granted") {
               // got permission
+              window.addEventListener("deviceorientation", onDeviceMotion);
               resolve();
 
               // re-invert inverted iOS acceleration values
