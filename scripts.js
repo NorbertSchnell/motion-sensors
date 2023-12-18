@@ -147,20 +147,20 @@ function onDeviceMotion(e) {
   }
 
   const accig = e.accelerationIncludingGravity;
-  setBiBar(accigBars[0], accig.x / 20);
-  setBiBar(accigBars[1], accig.y / 20);
-  setBiBar(accigBars[2], accig.z / 20);
-  setNumber(accigNumbers[0], accig.x);
-  setNumber(accigNumbers[1], accig.y);
-  setNumber(accigNumbers[2], accig.z);
+  setBiBar(accigBars[0], scaleAcc * accig.x / 20);
+  setBiBar(accigBars[1], scaleAcc * accig.y / 20);
+  setBiBar(accigBars[2], scaleAcc * accig.z / 20);
+  setNumber(accigNumbers[0], scaleAcc * accig.x);
+  setNumber(accigNumbers[1], scaleAcc * accig.y);
+  setNumber(accigNumbers[2], scaleAcc * accig.z);
 
   const acc = e.acceleration;
-  setBiBar(accBars[0], acc.x / 20);
-  setBiBar(accBars[1], acc.y / 20);
-  setBiBar(accBars[2], acc.z / 20);
-  setNumber(accNumbers[0], acc.x);
-  setNumber(accNumbers[1], acc.y);
-  setNumber(accNumbers[2], acc.z);
+  setBiBar(accBars[0], scaleAcc * acc.x / 20);
+  setBiBar(accBars[1], scaleAcc * acc.y / 20);
+  setBiBar(accBars[2], scaleAcc * acc.z / 20);
+  setNumber(accNumbers[0], scaleAcc * acc.x);
+  setNumber(accNumbers[1], scaleAcc * acc.y);
+  setNumber(accNumbers[2], scaleAcc * acc.z);
 
   const rot = e.rotationRate;
   setBiBar(rotBars[0], rot.alpha / 360);
